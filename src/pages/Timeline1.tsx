@@ -5,7 +5,7 @@ import { MainLayout } from '../layout/MainLayout';
 export const Timeline1 = () => {
   return (
     <MainLayout>
-      <section className="w-full h-full grid place-items-center">
+      <section className="w-full h-full container-128 py-10 grid place-items-center">
         <div className="w-full lg:w-[500px]">
           <Timeline data={timelineData_1} />
         </div>
