@@ -10,7 +10,7 @@ export const Home = () => {
         </h1>
         <ol className="my-10 list-none">
           <li>
-            <Link to="/timeline-1" className="text-xl lg:text-2xl">
+            <Link to="/timeline-1" className="link text-xl lg:text-2xl">
               Timeline Component
             </Link>
           </li>
