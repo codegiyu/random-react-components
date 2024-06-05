@@ -4,7 +4,7 @@ import { TimelineSingle } from './TimelineSingle';
 
 const Timeline: React.FC<TimelineProps> = ({ data }) => {
   return (
-    <section className="grid gap-6">
+    <section className="grid">
       {data.map((item, idx, arr) => (
         <TimelineSingle
           key={idx}
