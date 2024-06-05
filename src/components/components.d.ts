@@ -15,4 +15,6 @@ declare global {
   interface TimelineProps {
     data: TimelineDataSingle[];
   }
+
+  interface CustomSelectProps {}
 }
