@@ -5,16 +5,15 @@
 @tailwind utilities;
 
 @layer base {
-
   :root {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     font-weight: 400;
-  
+
     /* color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
     background-color: #242424; */
-  
+
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -24,7 +23,7 @@
   html {
     font-size: 16px;
   }
-  
+
   .link {
     font-weight: 500;
     color: #646cff;
@@ -33,7 +32,7 @@
   .link:hover {
     color: #535bf2;
   }
-  
+
   body {
     margin: 0;
     display: flex;
@@ -41,9 +40,11 @@
     min-width: 320px;
     min-height: 100vh;
   }
-  
-  @media (prefers-color-scheme: light) {}
-  @media (prefers-color-scheme: dark) {}
+
+  @media (prefers-color-scheme: light) {
+  }
+  @media (prefers-color-scheme: dark) {
+  }
 
   /* CONTAINERS */
   .container-128 {

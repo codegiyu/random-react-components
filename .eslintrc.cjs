@@ -11,42 +11,39 @@ module.exports = {
   ignorePatterns: ['dist', '.eslintrc.cjs', 'node_modules'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-      ecmaFeatures: {
-          jsx: true,
-      },
-      ecmaVersion: 'latest',
-      sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
   settings: {
-      react: {
-          version: '18.2',
-      },
-      'import/resolver': {
-          typescript: {},
-      },
+    react: {
+      version: '18.2',
+    },
+    'import/resolver': {
+      typescript: {},
+    },
   },
   plugins: ['@typescript-eslint', 'react-refresh', 'react', 'prettier'],
   rules: {
     'prettier/prettier': [
-        'error',
-        {
-            arrowParens: 'avoid',
-            bracketSameLine: true,
-            bracketSpacing: true,
-            singleQuote: true,
-            trailingComma: 'all',
-            semi: true,
-            printWidth: 90,
-            tabWidth: 2,
-            endOfLine: 'auto',
-        },
-        {
-            usePrettierrc: true,
-        },
+      'error',
+      {
+        arrowParens: 'avoid',
+        bracketSameLine: true,
+        bracketSpacing: true,
+        singleQuote: true,
+        trailingComma: 'all',
+        semi: true,
+        printWidth: 90,
+        tabWidth: 2,
+        endOfLine: 'auto',
+      },
+      {
+        usePrettierrc: true,
+      },
     ],
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
   },
-}
+};
