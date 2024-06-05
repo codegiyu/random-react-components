@@ -1,0 +1,51 @@
+name: checks
+on: push
+
+jobs:
+  build-app:
+    name: Build app
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+      - name: Install deps
+        run: npm install
+      - name: Build check
+        run: npm run build
+
+  format-check:
+    name: Format check
+    runs-on: ubuntu-latest
+    # needs: build-app
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+      - name: Install deps
+        run: npm install
+      - name: Format check
+        run: npm run format:check
+
+  lint-check:
+    name: Lint check
+    runs-on: ubuntu-latest
+    # needs: format-check
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+      - name: Install deps
+        run: npm install
+      - name: Lint check
+        run: npm run lint
+# The needs directive makes their jobs wait for the mentioned jobs to complete successfully before beginning to run
