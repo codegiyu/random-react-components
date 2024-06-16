@@ -15,4 +15,11 @@ declare global {
   interface TimelineProps {
     data: TimelineDataSingle[];
   }
+
+  interface ComponentDisplayProps {
+    img: string;
+    alt: string;
+    pageLink: string;
+    name: string;
+  }
 }
